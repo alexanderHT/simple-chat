@@ -1,0 +1,29 @@
+{
+  "name": "simple-chat",
+  "version": "1.0.0",
+  "description": "create a simple chat application with socket.io",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexanderHT/simple-chat.git"
+  },
+  "keywords": [
+    "socket.io",
+    "express",
+    "node.js"
+  ],
+  "author": "Alexander Hendrawan Tjahja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexanderHT/simple-chat/issues"
+  },
+  "homepage": "https://github.com/alexanderHT/simple-chat#readme",
+  "dependencies": {
+    "cors": "^2.8.1",
+    "express": "^4.14.1",
+    "socket.io": "^1.7.3"
+  }
+}
