@@ -16,18 +16,14 @@
     </style>
   </head>
   <body>
-
+    <!-- content -->
     <div class="container">
       <ul id="messages"></ul>
       <!-- form -->
       <form action="app.js">
         <input id="m" autocomplete="off" /><button>Send</button>
       </form>
-      
     </div>
-
-
-
 
   </body>
 
@@ -35,18 +31,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
   <script>
+    // declear socket io
     var socket = io();
 
+    // when form submit this function run
     $('form').submit(function(){
       socket.emit('chat message', $('#m').val());
-
-      $('#m').val('');
-
       return false;
     });
 
+    // give reponse
     socket.on('chat message', function(msg){
       $('#messages').append($('<li>').text(msg));
+      // reset input
+      $('#m').val('')
     });
+
   </script>
 </html>
